@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import User from './User';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [loginButtonText, setLoginButtonText] = useState("Login");
@@ -20,9 +21,9 @@ const Header = () => {
       </div>
       <div className="menu">
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to='/about'>About</Link> </li>
+          <li><Link to='/lazy'>Contact</Link></li>
           <li><button onClick={onLoginButtonClick}>{loginButtonText}</button></li>
           <li><User /></li>
         </ul>

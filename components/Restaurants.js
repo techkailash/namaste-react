@@ -1,6 +1,9 @@
-import { restaurants } from '../utils/mockData';
+import useRestaurants from '../utils/useRestaurants';
 
 const Restaurants = () => {
+
+  const restaurants = useRestaurants();
+
   return (
     <div className="restaurant-container">
       {restaurants.map((restaurant) => {
